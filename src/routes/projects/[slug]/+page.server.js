@@ -1,10 +1,8 @@
+// src/routes/projects/[slug]/+page.server.js
 import { error } from '@sveltejs/kit';
 
 const DB = {
-  timetable: { title:'Timetable Helper', body:'나만의 시간표를 정리하는 도구입니다.', tags: ['svelte', 'js', 'css'] },
-  gallery:   { title:'Image Gallery',    body:'미니 갤러리 예시입니다.', tags: ['svelte', 'js'] },
-  memo:      { title:'Memo Pad',         body:'브라우저 로컬에 메모를 저장/복원합니다.', tags: ['svelte', 'js'] },
-  'go-board': { title:'Go Board',         body:'SvelteKit으로 만든 간단한 바둑판입니다. 클릭해서 돌을 놓아보세요!', tags: ['svelte', 'js', 'game'] }
+  'omok-game': { title:'Omok Game', body:'SvelteKit으로 만든 심플한 오목 게임입니다. 5개의 돌을 먼저 연결해 승리하세요!', tags: ['svelte', 'js', 'game'] }
 };
 
 export function load({ params }) {
