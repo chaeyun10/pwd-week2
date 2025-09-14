@@ -38,7 +38,7 @@
 
 {#if data.slug === 'memo'}
   <textarea rows="6" bind:value={memo} class="card" style="width:100%"></textarea>
-  <button on:click={save}>메모 저장</button>
+  <button onclick={save}>메모 저장</button>
   <p style="opacity:.6">브라우저 로컬에만 저장됩니다.</p>
 {:else if data.slug === 'go-board'}
   <GoBoard />

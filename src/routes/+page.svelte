@@ -14,4 +14,4 @@
 </label>
 <p>미리보기: <strong>{name || '(입력 대기)'}</strong></p>
 
-<button on:click={randomize}>랜덤 메시지</button>
+<button onclick={randomize}>랜덤 메시지</button>

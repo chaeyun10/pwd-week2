@@ -34,7 +34,7 @@
     <a href="/about">About</a>
     <a href="/projects">Projects</a>
   </div>
-  <button on:click={toggleTheme}>
+  <button onclick={toggleTheme}>
     {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
   </button>
 </nav>
