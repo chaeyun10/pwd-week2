@@ -68,7 +68,7 @@
   <div class="status-message">
     {#if winner}
       <h3 class="winner">🎉 {winner === 1 ? '흑돌' : '백돌'} 승리!</h3>
-      <button on:click={resetBoard} class="reset-button">다시 하기</button>
+      <button onclick={resetBoard} class="reset-button">다시 하기</button>
     {:else}
       <p>현재 차례:
         <span class="player-turn {currentPlayer === 1 ? 'black-turn' : 'white-turn'}">
@@ -81,7 +81,12 @@
   <div class="go-board" style="--size: {size};">
     {#each board as row, rowIndex}
       {#each row as stone, colIndex}
-        <div class="go-point" on:click={() => placeStone(rowIndex, colIndex)}>
+        <div 
+          class="go-point" 
+          onclick={() => placeStone(rowIndex, colIndex)}
+          style:border-right={colIndex === size - 1 ? 'none' : ''}
+          style:border-bottom={rowIndex === size - 1 ? 'none' : ''}
+        >
           {#if stone === 1}
             <div class="stone black-stone"></div>
           {:else if stone === 2}
@@ -116,12 +121,6 @@
     height: 100%;
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
-  }
-  .go-point:nth-child(var(--size)n) {
-    border-right: none;
-  }
-  .go-point:nth-last-child(-n + var(--size)) {
-    border-bottom: none;
   }
   .stone {
     position: absolute;
