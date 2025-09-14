@@ -1,7 +1,6 @@
-<!-- src/routes/projects/+page.svelte -->
 <script>
   import Card from '$lib/Card.svelte';
-  let { data } = $props(); // { projects }
+  let { data } = $props();
 </script>
 
 <h2>Projects</h2>

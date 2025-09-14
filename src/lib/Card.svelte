@@ -1,4 +1,3 @@
-<!-- src/lib/Card.svelte -->
 <script>
   let { title, summary, href } = $props();
 </script>
