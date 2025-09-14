@@ -32,8 +32,7 @@
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-  </div>
+    <a href="/play">Play</a> </div>
   <button onclick={toggleTheme}>
     {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
   </button>
